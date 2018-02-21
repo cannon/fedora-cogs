@@ -1,0 +1,8 @@
+{
+    "NAME" : "Fedora",
+    "AUTHOR" : "swamponions",
+    "SHORT" : "Google image search thru api.",
+    "DESCRIPTION" : "",
+    "TAGS" : [ "images", "search" ],
+    "HIDDEN" : false
+}
