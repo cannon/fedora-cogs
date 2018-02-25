@@ -25,8 +25,8 @@ class Fedora:
 async def fetch_image(self, ctx, text):
     server = ctx.message.server
     
-    if (time.time() - self.lasttime) < 6:
-        return await self.bot.say(str((time.time() - self.lasttime)))
+    if (time.time() - self.lasttime) < 7:
+        return
         
     self.lasttime = time.time()
 
