@@ -14,11 +14,11 @@ class Fedora:
 
     @commands.command(pass_context=True,no_pm=True)
     async def image(self, ctx, *text):
-        await fetch_image(self, ctx, text[0])
+        await fetch_image(self, ctx, ' '.join(text))
 
     @commands.command(pass_context=True,no_pm=True)
     async def gif(self, ctx, *text):
-        await fetch_image(self, ctx, "gif "+(text[0]))
+        await fetch_image(self, ctx, "gif "+( ' '.join(text) ))
 
 async def fetch_image(self, ctx, text):
     server = ctx.message.server
