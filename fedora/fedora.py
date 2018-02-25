@@ -6,11 +6,13 @@ from .utils import checks
 from __main__ import send_cmd_help
 from urllib import parse
 import aiohttp
+import time
 import os
 
 class Fedora:
     def __init__(self, bot):
         self.bot = bot
+        self.lasttime = 0
 
     @commands.command(pass_context=True,no_pm=True)
     async def image(self, ctx, *text):
@@ -22,6 +24,11 @@ class Fedora:
 
 async def fetch_image(self, ctx, text):
     server = ctx.message.server
+    
+    if (time.time() - self.lasttime) < 6:
+        return
+        
+    self.lasttime = time.time()
 
     # Fetch the image or display an error
     try:
