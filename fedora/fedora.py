@@ -26,7 +26,7 @@ async def fetch_image(self, ctx, text):
     server = ctx.message.server
     
     if (time.time() - self.lasttime) < 6:
-        return
+        return await self.bot.say(str((time.time() - self.lasttime)))
         
     self.lasttime = time.time()
 
